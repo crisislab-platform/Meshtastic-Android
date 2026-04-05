@@ -1,7 +1,7 @@
 <p align="center">
   <img src=".github/meshtastic_logo.png" alt="Meshtastic Logo" width="200"/>
 </p>
-<h1 align="center">Meshtastic-Android</h1>
+<h1 align="center">CRISiSLab's Simplified Android Meshtastic Client</h1>
 
 ![GitHub all releases](https://img.shields.io/github/downloads/meshtastic/meshtastic-android/total)
 [![Android CI](https://github.com/meshtastic/Meshtastic-Android/actions/workflows/pull-request.yml/badge.svg?branch=main)](https://github.com/meshtastic/Meshtastic-Android/actions/workflows/pull-request.yml)
@@ -11,33 +11,12 @@
 [![Fiscal Contributors](https://opencollective.com/meshtastic/tiers/badge.svg?label=Fiscal%20Contributors&color=deeppink)](https://opencollective.com/meshtastic/)
 [![Vercel](https://img.shields.io/static/v1?label=Powered%20by&message=Vercel&style=flat&logo=vercel&color=000000)](https://vercel.com?utm_source=meshtastic&utm_campaign=oss)
 
-This is a tool for using Android (and Compose Desktop) with open-source mesh radios. For more information see our webpage: [meshtastic.org](https://www.meshtastic.org). If you are looking for the device side code, see [here](https://github.com/meshtastic/firmware).
 
-This project is currently beta testing across various providers. If you have questions or feedback please [Join our discussion forum](https://github.com/orgs/meshtastic/discussions) or the [Discord Group](https://discord.gg/meshtastic) . We would love to hear from you!
+## Why are we modifying the stock client?
 
+During meetings with local community groups focused on deploying these devices to increase disaster resiliency, they expressed that they found the Meshtastic client too verbose, complicated, and confusing. They wished for a simpler app where you could message, see your conacts, and change some simple settings.
 
-
-## Get Meshtastic
-
-The easiest, and fastest way to get the latest beta releases is to use our [github releases](https://github.com/meshtastic/Meshtastic-Android/releases). It is recommend to use these with [Obtainium](https://github.com/ImranR98/Obtainium) to get the latest updates.
-
-Alternatively, these other providers are also available, but may be slower to update. 
-
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-alt="Get it on F-Droid"
-width="24%">](https://f-droid.org/packages/com.geeksville.mesh/)
-[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png"
-alt="Get it on IzzyOnDroid"
-width="24%">](https://apt.izzysoft.de/fdroid/index/apk/com.geeksville.mesh)
-[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"
-alt="Get it on GitHub"
-width="24%">](https://github.com/meshtastic/Meshtastic-Android/releases)
-[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-alt="Download at https://play.google.com/store/apps/details?id=com.geeksville.mesh]"
-width="24%">](https://play.google.com/store/apps/details?id=com.geeksville.mesh&referrer=utm_source%3Dgithub-android-readme)
-
-The play store is the last to update of these options, but if you want to join the Play Store testing program go to [this URL](https://play.google.com/apps/testing/com.geeksville.mesh) and opt-in to become a tester.
-If you encounter any problems or have questions, [ask us on the discord](https://discord.gg/meshtastic), [create an issue](https://github.com/meshtastic/Meshtastic-Android/issues), or [post in the forum](https://github.com/orgs/meshtastic/discussions) and we'll help as we can.
+So this project aims to strip out any unnecessary features that may cause confusion.
 
 ## Documentation
 
@@ -70,10 +49,6 @@ The app follows modern Android development practices, built on top of a shared K
 ### Bluetooth Low Energy (BLE)
 The BLE stack uses a multiplatform interface-driven architecture. Platform-agnostic interfaces live in `commonMain`, utilizing the **Kable** multiplatform BLE library to handle device communication across all supported targets (Android, Desktop). This provides a robust, Coroutine-based architecture for reliable device communication while remaining fully KMP compatible. See [core/ble/README.md](core/ble/README.md) for details.
 
-## Translations
-
-You can help translate the app into your native language using [Crowdin](https://crowdin.meshtastic.org/android).
-
 ## API & Integration
 
 Developers can integrate with the Meshtastic Android app using our published API library via **JitPack**. This allows third-party applications (like the ATAK plugin) to communicate with the mesh service via AIDL.
@@ -93,11 +68,6 @@ e.g.
 ```properties
 MAPS_API_KEY=your_google_maps_api_key_here
 ```
-
-## Contributing guidelines
-
-For detailed instructions on how to contribute, please see our [CONTRIBUTING.md](CONTRIBUTING.md) file.
-For details on our release process, see the [RELEASE_PROCESS.md](RELEASE_PROCESS.md) file.
 
 ## Repository Statistics
 
