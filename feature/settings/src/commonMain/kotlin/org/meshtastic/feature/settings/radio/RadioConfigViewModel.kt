@@ -485,24 +485,24 @@ open class RadioConfigViewModel(
                 }
             }
 
-            is ModuleRoute -> {
-                if (route == ModuleRoute.CANNED_MESSAGE) {
-                    viewModelScope.launch {
-                        val packetId = radioConfigUseCase.getCannedMessages(destNum)
-                        registerRequestId(packetId)
-                    }
-                }
-                if (route == ModuleRoute.EXT_NOTIFICATION) {
-                    viewModelScope.launch {
-                        val packetId = radioConfigUseCase.getRingtone(destNum)
-                        registerRequestId(packetId)
-                    }
-                }
-                viewModelScope.launch {
-                    val packetId = radioConfigUseCase.getModuleConfig(destNum, route.type)
-                    registerRequestId(packetId)
-                }
-            }
+//            is ModuleRoute -> {
+//                if (route == ModuleRoute.CANNED_MESSAGE) {
+//                    viewModelScope.launch {
+//                        val packetId = radioConfigUseCase.getCannedMessages(destNum)
+//                        registerRequestId(packetId)
+//                    }
+//                }
+//                if (route == ModuleRoute.EXT_NOTIFICATION) {
+//                    viewModelScope.launch {
+//                        val packetId = radioConfigUseCase.getRingtone(destNum)
+//                        registerRequestId(packetId)
+//                    }
+//                }
+//                viewModelScope.launch {
+//                    val packetId = radioConfigUseCase.getModuleConfig(destNum, route.type)
+//                    registerRequestId(packetId)
+//                }
+//            }
         }
     }
 

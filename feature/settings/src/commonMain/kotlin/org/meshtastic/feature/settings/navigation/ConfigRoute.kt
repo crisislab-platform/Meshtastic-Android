@@ -48,14 +48,14 @@ import org.meshtastic.proto.DeviceMetadata
 enum class ConfigRoute(val title: StringResource, val route: Route, val icon: ImageVector?, val type: Int = 0) {
     USER(Res.string.user, SettingsRoutes.User, Icons.Default.Person, 0),
     CHANNELS(Res.string.channels, SettingsRoutes.ChannelConfig, Icons.AutoMirrored.Default.List, 0),
-    DEVICE(Res.string.device, SettingsRoutes.Device, Icons.Default.Router, AdminMessage.ConfigType.DEVICE_CONFIG.value),
+//    DEVICE(Res.string.device, SettingsRoutes.Device, Icons.Default.Router, AdminMessage.ConfigType.DEVICE_CONFIG.value),
     POSITION(
         Res.string.position,
         SettingsRoutes.Position,
         Icons.Default.LocationOn,
         AdminMessage.ConfigType.POSITION_CONFIG.value,
     ),
-    POWER(Res.string.power, SettingsRoutes.Power, Icons.Default.Power, AdminMessage.ConfigType.POWER_CONFIG.value),
+//    POWER(Res.string.power, SettingsRoutes.Power, Icons.Default.Power, AdminMessage.ConfigType.POWER_CONFIG.value),
     NETWORK(
         Res.string.network,
         SettingsRoutes.Network,
@@ -75,12 +75,12 @@ enum class ConfigRoute(val title: StringResource, val route: Route, val icon: Im
         Icons.Default.Bluetooth,
         AdminMessage.ConfigType.BLUETOOTH_CONFIG.value,
     ),
-    SECURITY(
-        Res.string.security,
-        SettingsRoutes.Security,
-        Icons.Default.Security,
-        AdminMessage.ConfigType.SECURITY_CONFIG.value,
-    ),
+//    SECURITY(
+//        Res.string.security,
+//        SettingsRoutes.Security,
+//        Icons.Default.Security,
+//        AdminMessage.ConfigType.SECURITY_CONFIG.value,
+//    ),
     ;
 
     companion object {
@@ -93,7 +93,7 @@ enum class ConfigRoute(val title: StringResource, val route: Route, val icon: Im
             }
         }
 
-        val radioConfigRoutes = listOf(USER, LORA, CHANNELS, SECURITY)
+        val radioConfigRoutes = listOf(USER, LORA, CHANNELS)//, SECURITY)
 
         fun deviceConfigRoutes(metadata: DeviceMetadata?): List<ConfigRoute> =
             filterExcludedFrom(metadata) - radioConfigRoutes
