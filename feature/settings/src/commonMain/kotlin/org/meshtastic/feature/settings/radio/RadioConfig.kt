@@ -202,12 +202,12 @@ private fun AdvancedSection(isManaged: Boolean, isOtaCapable: Boolean, enabled: 
             onClick = { onNavigate(SettingsRoutes.CleanNodeDb) },
         )
 
-        ListItem(
-            text = stringResource(Res.string.debug_panel),
-            leadingIcon = Icons.Rounded.BugReport,
-            enabled = enabled,
-            onClick = { onNavigate(SettingsRoutes.DebugPanel) },
-        )
+//        ListItem(
+//            text = stringResource(Res.string.debug_panel),
+//            leadingIcon = Icons.Rounded.BugReport,
+//            enabled = enabled,
+//            onClick = { onNavigate(SettingsRoutes.DebugPanel) },
+//        )
     }
 }
 

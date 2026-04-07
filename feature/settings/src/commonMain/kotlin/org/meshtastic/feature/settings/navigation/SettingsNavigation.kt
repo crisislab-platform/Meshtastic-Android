@@ -137,11 +137,11 @@ fun EntryProviderScope<NavKey>.settingsGraph(backStack: NavBackStack<NavKey>) {
             when (routeInfo) {
                 ConfigRoute.USER -> UserConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.CHANNELS -> ChannelConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-//                ConfigRoute.DEVICE -> DeviceConfigScreenCommon(viewModel, onBack = { backStack.removeLastOrNull() })
+                ConfigRoute.DEVICE -> DeviceConfigScreenCommon(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.POSITION -> PositionConfigScreenCommon(viewModel, onBack = { backStack.removeLastOrNull() })
 //                ConfigRoute.POWER -> PowerConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.NETWORK -> NetworkConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ConfigRoute.DISPLAY -> DisplayConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ConfigRoute.DISPLAY -> DisplayConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.LORA -> LoRaConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.BLUETOOTH -> BluetoothConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
 //                ConfigRoute.SECURITY -> SecurityConfigScreenCommon(viewModel, onBack = { backStack.removeLastOrNull() })
@@ -185,10 +185,10 @@ fun EntryProviderScope<NavKey>.settingsGraph(backStack: NavBackStack<NavKey>) {
         }
     }
 
-    entry<SettingsRoutes.DebugPanel> {
-        val viewModel: DebugViewModel = koinViewModel()
-        DebugScreen(viewModel = viewModel, onNavigateUp = { backStack.removeLastOrNull() })
-    }
+//    entry<SettingsRoutes.DebugPanel> {
+//        val viewModel: DebugViewModel = koinViewModel()
+//        DebugScreen(viewModel = viewModel, onNavigateUp = { backStack.removeLastOrNull() })
+//    }
 
     entry<SettingsRoutes.About> {
         AboutScreen(onNavigateUp = { backStack.removeLastOrNull() }, jsonProvider = { getAboutLibrariesJson() })

@@ -48,7 +48,7 @@ import org.meshtastic.proto.DeviceMetadata
 enum class ConfigRoute(val title: StringResource, val route: Route, val icon: ImageVector?, val type: Int = 0) {
     USER(Res.string.user, SettingsRoutes.User, Icons.Default.Person, 0),
     CHANNELS(Res.string.channels, SettingsRoutes.ChannelConfig, Icons.AutoMirrored.Default.List, 0),
-//    DEVICE(Res.string.device, SettingsRoutes.Device, Icons.Default.Router, AdminMessage.ConfigType.DEVICE_CONFIG.value),
+    DEVICE(Res.string.device, SettingsRoutes.Device, Icons.Default.Router, AdminMessage.ConfigType.DEVICE_CONFIG.value),
     POSITION(
         Res.string.position,
         SettingsRoutes.Position,
@@ -62,12 +62,12 @@ enum class ConfigRoute(val title: StringResource, val route: Route, val icon: Im
         Icons.Default.Wifi,
         AdminMessage.ConfigType.NETWORK_CONFIG.value,
     ),
-    DISPLAY(
-        Res.string.display,
-        SettingsRoutes.Display,
-        Icons.Default.DisplaySettings,
-        AdminMessage.ConfigType.DISPLAY_CONFIG.value,
-    ),
+//    DISPLAY(
+//        Res.string.display,
+//        SettingsRoutes.Display,
+//        Icons.Default.DisplaySettings,
+//        AdminMessage.ConfigType.DISPLAY_CONFIG.value,
+//    ),
     LORA(Res.string.lora, SettingsRoutes.LoRa, Icons.Default.CellTower, AdminMessage.ConfigType.LORA_CONFIG.value),
     BLUETOOTH(
         Res.string.bluetooth,

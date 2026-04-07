@@ -485,7 +485,7 @@ open class RadioConfigViewModel(
                 }
             }
 
-//            is ModuleRoute -> {
+            is ModuleRoute -> {
 //                if (route == ModuleRoute.CANNED_MESSAGE) {
 //                    viewModelScope.launch {
 //                        val packetId = radioConfigUseCase.getCannedMessages(destNum)
@@ -498,11 +498,11 @@ open class RadioConfigViewModel(
 //                        registerRequestId(packetId)
 //                    }
 //                }
-//                viewModelScope.launch {
-//                    val packetId = radioConfigUseCase.getModuleConfig(destNum, route.type)
-//                    registerRequestId(packetId)
-//                }
-//            }
+                viewModelScope.launch {
+                    val packetId = radioConfigUseCase.getModuleConfig(destNum, route.type)
+                    registerRequestId(packetId)
+                }
+            }
         }
     }
 

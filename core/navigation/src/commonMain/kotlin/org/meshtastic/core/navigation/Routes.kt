@@ -108,17 +108,17 @@ object SettingsRoutes {
 
     @Serializable data object Position : Route
 
-    @Serializable data object Power : Route
+//    @Serializable data object Power : Route
 
     @Serializable data object Network : Route
 
-    @Serializable data object Display : Route
+//    @Serializable data object Display : Route
 
     @Serializable data object LoRa : Route
 
     @Serializable data object Bluetooth : Route
 
-    @Serializable data object Security : Route
+//    @Serializable data object Security : Route
 
     // endregion
 
@@ -126,35 +126,35 @@ object SettingsRoutes {
 
     @Serializable data object MQTT : Route
 
-    @Serializable data object Serial : Route
-
-    @Serializable data object ExtNotification : Route
-
-    @Serializable data object StoreForward : Route
-
-    @Serializable data object RangeTest : Route
-
-    @Serializable data object Telemetry : Route
-
-    @Serializable data object CannedMessage : Route
-
-    @Serializable data object Audio : Route
-
-    @Serializable data object RemoteHardware : Route
-
-    @Serializable data object NeighborInfo : Route
-
-    @Serializable data object AmbientLighting : Route
-
-    @Serializable data object DetectionSensor : Route
-
-    @Serializable data object Paxcounter : Route
-
-    @Serializable data object StatusMessage : Route
-
-    @Serializable data object TrafficManagement : Route
-
-    @Serializable data object TAK : Route
+//    @Serializable data object Serial : Route
+//
+//    @Serializable data object ExtNotification : Route
+//
+//    @Serializable data object StoreForward : Route
+//
+//    @Serializable data object RangeTest : Route
+//
+//    @Serializable data object Telemetry : Route
+//
+//    @Serializable data object CannedMessage : Route
+//
+//    @Serializable data object Audio : Route
+//
+//    @Serializable data object RemoteHardware : Route
+//
+//    @Serializable data object NeighborInfo : Route
+//
+//    @Serializable data object AmbientLighting : Route
+//
+//    @Serializable data object DetectionSensor : Route
+//
+//    @Serializable data object Paxcounter : Route
+//
+//    @Serializable data object StatusMessage : Route
+//
+//    @Serializable data object TrafficManagement : Route
+//
+//    @Serializable data object TAK : Route
 
     // endregion
 
@@ -162,7 +162,7 @@ object SettingsRoutes {
 
     @Serializable data object CleanNodeDb : Route
 
-    @Serializable data object DebugPanel : Route
+//    @Serializable data object DebugPanel : Route
 
     @Serializable data object About : Route
 
