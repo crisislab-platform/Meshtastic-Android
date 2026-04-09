@@ -55,19 +55,19 @@ enum class ConfigRoute(val title: StringResource, val route: Route, val icon: Im
         Icons.Default.LocationOn,
         AdminMessage.ConfigType.POSITION_CONFIG.value,
     ),
-    POWER(Res.string.power, SettingsRoutes.Power, Icons.Default.Power, AdminMessage.ConfigType.POWER_CONFIG.value),
+//    POWER(Res.string.power, SettingsRoutes.Power, Icons.Default.Power, AdminMessage.ConfigType.POWER_CONFIG.value),
     NETWORK(
         Res.string.network,
         SettingsRoutes.Network,
         Icons.Default.Wifi,
         AdminMessage.ConfigType.NETWORK_CONFIG.value,
     ),
-    DISPLAY(
-        Res.string.display,
-        SettingsRoutes.Display,
-        Icons.Default.DisplaySettings,
-        AdminMessage.ConfigType.DISPLAY_CONFIG.value,
-    ),
+//    DISPLAY(
+//        Res.string.display,
+//        SettingsRoutes.Display,
+//        Icons.Default.DisplaySettings,
+//        AdminMessage.ConfigType.DISPLAY_CONFIG.value,
+//    ),
     LORA(Res.string.lora, SettingsRoutes.LoRa, Icons.Default.CellTower, AdminMessage.ConfigType.LORA_CONFIG.value),
     BLUETOOTH(
         Res.string.bluetooth,
@@ -75,12 +75,12 @@ enum class ConfigRoute(val title: StringResource, val route: Route, val icon: Im
         Icons.Default.Bluetooth,
         AdminMessage.ConfigType.BLUETOOTH_CONFIG.value,
     ),
-    SECURITY(
-        Res.string.security,
-        SettingsRoutes.Security,
-        Icons.Default.Security,
-        AdminMessage.ConfigType.SECURITY_CONFIG.value,
-    ),
+//    SECURITY(
+//        Res.string.security,
+//        SettingsRoutes.Security,
+//        Icons.Default.Security,
+//        AdminMessage.ConfigType.SECURITY_CONFIG.value,
+//    ),
     ;
 
     companion object {
@@ -93,7 +93,7 @@ enum class ConfigRoute(val title: StringResource, val route: Route, val icon: Im
             }
         }
 
-        val radioConfigRoutes = listOf(USER, LORA, CHANNELS, SECURITY)
+        val radioConfigRoutes = listOf(USER, LORA, CHANNELS)//, SECURITY)
 
         fun deviceConfigRoutes(metadata: DeviceMetadata?): List<ConfigRoute> =
             filterExcludedFrom(metadata) - radioConfigRoutes

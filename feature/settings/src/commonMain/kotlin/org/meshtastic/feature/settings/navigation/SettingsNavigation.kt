@@ -139,12 +139,12 @@ fun EntryProviderScope<NavKey>.settingsGraph(backStack: NavBackStack<NavKey>) {
                 ConfigRoute.CHANNELS -> ChannelConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.DEVICE -> DeviceConfigScreenCommon(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.POSITION -> PositionConfigScreenCommon(viewModel, onBack = { backStack.removeLastOrNull() })
-                ConfigRoute.POWER -> PowerConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ConfigRoute.POWER -> PowerConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.NETWORK -> NetworkConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ConfigRoute.DISPLAY -> DisplayConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ConfigRoute.DISPLAY -> DisplayConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.LORA -> LoRaConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ConfigRoute.BLUETOOTH -> BluetoothConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ConfigRoute.SECURITY -> SecurityConfigScreenCommon(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ConfigRoute.SECURITY -> SecurityConfigScreenCommon(viewModel, onBack = { backStack.removeLastOrNull() })
             }
         }
     }
@@ -154,41 +154,41 @@ fun EntryProviderScope<NavKey>.settingsGraph(backStack: NavBackStack<NavKey>) {
             LaunchedEffect(Unit) { viewModel.setResponseStateLoading(routeInfo) }
             when (routeInfo) {
                 ModuleRoute.MQTT -> MQTTConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.SERIAL -> SerialConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.EXT_NOTIFICATION ->
-                    ExternalNotificationConfigScreenCommon(
-                        viewModel = viewModel,
-                        onBack = { backStack.removeLastOrNull() },
-                    )
-                ModuleRoute.STORE_FORWARD ->
-                    StoreForwardConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.RANGE_TEST -> RangeTestConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.SERIAL -> SerialConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.EXT_NOTIFICATION ->
+//                    ExternalNotificationConfigScreenCommon(
+//                        viewModel = viewModel,
+//                        onBack = { backStack.removeLastOrNull() },
+//                    )
+//                ModuleRoute.STORE_FORWARD ->
+//                    StoreForwardConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.RANGE_TEST -> RangeTestConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
                 ModuleRoute.TELEMETRY -> TelemetryConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.CANNED_MESSAGE ->
-                    CannedMessageConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.AUDIO -> AudioConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.REMOTE_HARDWARE ->
-                    RemoteHardwareConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.NEIGHBOR_INFO ->
-                    NeighborInfoConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.AMBIENT_LIGHTING ->
-                    AmbientLightingConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.DETECTION_SENSOR ->
-                    DetectionSensorConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.PAXCOUNTER -> PaxcounterConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.STATUS_MESSAGE ->
-                    StatusMessageConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.TRAFFIC_MANAGEMENT ->
-                    TrafficManagementConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-                ModuleRoute.TAK -> TAKConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.CANNED_MESSAGE ->
+//                    CannedMessageConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.AUDIO -> AudioConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.REMOTE_HARDWARE ->
+//                    RemoteHardwareConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.NEIGHBOR_INFO ->
+//                    NeighborInfoConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.AMBIENT_LIGHTING ->
+//                    AmbientLightingConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.DETECTION_SENSOR ->
+//                    DetectionSensorConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.PAXCOUNTER -> PaxcounterConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.STATUS_MESSAGE ->
+//                    StatusMessageConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.TRAFFIC_MANAGEMENT ->
+//                    TrafficManagementConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+//                ModuleRoute.TAK -> TAKConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
             }
         }
     }
 
-    entry<SettingsRoutes.DebugPanel> {
-        val viewModel: DebugViewModel = koinViewModel()
-        DebugScreen(viewModel = viewModel, onNavigateUp = { backStack.removeLastOrNull() })
-    }
+//    entry<SettingsRoutes.DebugPanel> {
+//        val viewModel: DebugViewModel = koinViewModel()
+//        DebugScreen(viewModel = viewModel, onNavigateUp = { backStack.removeLastOrNull() })
+//    }
 
     entry<SettingsRoutes.About> {
         AboutScreen(onNavigateUp = { backStack.removeLastOrNull() }, jsonProvider = { getAboutLibrariesJson() })

@@ -82,9 +82,9 @@ fun RadioConfigItemList(
         DeviceConfigSection(isManaged, enabled, onNavigate)
         ModuleSettingsSection(isManaged, enabled, onNavigate)
 
-        if (state.isLocal) {
-            BackupRestoreSection(isManaged, enabled, onImport, onExport)
-        }
+//        if (state.isLocal) {
+//            BackupRestoreSection(isManaged, enabled, onImport, onExport)
+//        }
 
         AdministrationSection(enabled, onNavigate)
 
@@ -140,27 +140,27 @@ private fun ModuleSettingsSection(isManaged: Boolean, enabled: Boolean, onNaviga
     }
 }
 
-@Composable
-private fun BackupRestoreSection(isManaged: Boolean, enabled: Boolean, onImport: () -> Unit, onExport: () -> Unit) {
-    ExpressiveSection(title = stringResource(Res.string.backup_restore)) {
-        if (isManaged) {
-            ManagedMessage()
-        }
-
-        ListItem(
-            text = stringResource(Res.string.import_configuration),
-            leadingIcon = Icons.Rounded.Download,
-            enabled = enabled,
-            onClick = onImport,
-        )
-        ListItem(
-            text = stringResource(Res.string.export_configuration),
-            leadingIcon = Icons.Rounded.Upload,
-            enabled = enabled,
-            onClick = onExport,
-        )
-    }
-}
+//@Composable
+//private fun BackupRestoreSection(isManaged: Boolean, enabled: Boolean, onImport: () -> Unit, onExport: () -> Unit) {
+//    ExpressiveSection(title = stringResource(Res.string.backup_restore)) {
+//        if (isManaged) {
+//            ManagedMessage()
+//        }
+//
+//        ListItem(
+//            text = stringResource(Res.string.import_configuration),
+//            leadingIcon = Icons.Rounded.Download,
+//            enabled = enabled,
+//            onClick = onImport,
+//        )
+//        ListItem(
+//            text = stringResource(Res.string.export_configuration),
+//            leadingIcon = Icons.Rounded.Upload,
+//            enabled = enabled,
+//            onClick = onExport,
+//        )
+//    }
+//}
 
 @Composable
 private fun AdministrationSection(enabled: Boolean, onNavigate: (Route) -> Unit) {
@@ -202,12 +202,12 @@ private fun AdvancedSection(isManaged: Boolean, isOtaCapable: Boolean, enabled: 
             onClick = { onNavigate(SettingsRoutes.CleanNodeDb) },
         )
 
-        ListItem(
-            text = stringResource(Res.string.debug_panel),
-            leadingIcon = Icons.Rounded.BugReport,
-            enabled = enabled,
-            onClick = { onNavigate(SettingsRoutes.DebugPanel) },
-        )
+//        ListItem(
+//            text = stringResource(Res.string.debug_panel),
+//            leadingIcon = Icons.Rounded.BugReport,
+//            enabled = enabled,
+//            onClick = { onNavigate(SettingsRoutes.DebugPanel) },
+//        )
     }
 }
 

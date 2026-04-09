@@ -65,121 +65,121 @@ enum class ModuleRoute(
     val isApplicable: (Config.DeviceConfig.Role?) -> Boolean = { true },
 ) {
     MQTT(Res.string.mqtt, SettingsRoutes.MQTT, Icons.Rounded.Cloud, AdminMessage.ModuleConfigType.MQTT_CONFIG.value),
-    SERIAL(
-        Res.string.serial,
-        SettingsRoutes.Serial,
-        Icons.Rounded.Usb,
-        AdminMessage.ModuleConfigType.SERIAL_CONFIG.value,
-    ),
-    EXT_NOTIFICATION(
-        Res.string.external_notification,
-        SettingsRoutes.ExtNotification,
-        Icons.Rounded.Notifications,
-        AdminMessage.ModuleConfigType.EXTNOTIF_CONFIG.value,
-    ),
-    STORE_FORWARD(
-        Res.string.store_forward,
-        SettingsRoutes.StoreForward,
-        Icons.AutoMirrored.Default.Forward,
-        AdminMessage.ModuleConfigType.STOREFORWARD_CONFIG.value,
-    ),
-    RANGE_TEST(
-        Res.string.range_test,
-        SettingsRoutes.RangeTest,
-        Icons.Rounded.Speed,
-        AdminMessage.ModuleConfigType.RANGETEST_CONFIG.value,
-    ),
+//    SERIAL(
+//        Res.string.serial,
+//        SettingsRoutes.Serial,
+//        Icons.Rounded.Usb,
+//        AdminMessage.ModuleConfigType.SERIAL_CONFIG.value,
+//    ),
+//    EXT_NOTIFICATION(
+//        Res.string.external_notification,
+//        SettingsRoutes.ExtNotification,
+//        Icons.Rounded.Notifications,
+//        AdminMessage.ModuleConfigType.EXTNOTIF_CONFIG.value,
+//    ),
+//    STORE_FORWARD(
+//        Res.string.store_forward,
+//        SettingsRoutes.StoreForward,
+//        Icons.AutoMirrored.Default.Forward,
+//        AdminMessage.ModuleConfigType.STOREFORWARD_CONFIG.value,
+//    ),
+//    RANGE_TEST(
+//        Res.string.range_test,
+//        SettingsRoutes.RangeTest,
+//        Icons.Rounded.Speed,
+//        AdminMessage.ModuleConfigType.RANGETEST_CONFIG.value,
+//    ),
     TELEMETRY(
         Res.string.telemetry,
         SettingsRoutes.Telemetry,
         Icons.Rounded.DataUsage,
         AdminMessage.ModuleConfigType.TELEMETRY_CONFIG.value,
     ),
-    CANNED_MESSAGE(
-        Res.string.canned_message,
-        SettingsRoutes.CannedMessage,
-        Icons.AutoMirrored.Default.Message,
-        AdminMessage.ModuleConfigType.CANNEDMSG_CONFIG.value,
-    ),
-    AUDIO(
-        Res.string.audio,
-        SettingsRoutes.Audio,
-        Icons.AutoMirrored.Default.VolumeUp,
-        AdminMessage.ModuleConfigType.AUDIO_CONFIG.value,
-    ),
-    REMOTE_HARDWARE(
-        Res.string.remote_hardware,
-        SettingsRoutes.RemoteHardware,
-        Icons.Rounded.SettingsRemote,
-        AdminMessage.ModuleConfigType.REMOTEHARDWARE_CONFIG.value,
-    ),
-    NEIGHBOR_INFO(
-        Res.string.neighbor_info,
-        SettingsRoutes.NeighborInfo,
-        Icons.Rounded.People,
-        AdminMessage.ModuleConfigType.NEIGHBORINFO_CONFIG.value,
-    ),
-    AMBIENT_LIGHTING(
-        Res.string.ambient_lighting,
-        SettingsRoutes.AmbientLighting,
-        Icons.Rounded.LightMode,
-        AdminMessage.ModuleConfigType.AMBIENTLIGHTING_CONFIG.value,
-    ),
-    DETECTION_SENSOR(
-        Res.string.detection_sensor,
-        SettingsRoutes.DetectionSensor,
-        Icons.Rounded.Sensors,
-        AdminMessage.ModuleConfigType.DETECTIONSENSOR_CONFIG.value,
-    ),
-    PAXCOUNTER(
-        Res.string.paxcounter,
-        SettingsRoutes.Paxcounter,
-        Icons.Rounded.PermScanWifi,
-        AdminMessage.ModuleConfigType.PAXCOUNTER_CONFIG.value,
-    ),
-    STATUS_MESSAGE(
-        Res.string.status_message,
-        SettingsRoutes.StatusMessage,
-        Icons.AutoMirrored.Default.Message,
-        AdminMessage.ModuleConfigType.STATUSMESSAGE_CONFIG.value,
-        isSupported = { it.supportsStatusMessage },
-    ),
-    TRAFFIC_MANAGEMENT(
-        Res.string.traffic_management,
-        SettingsRoutes.TrafficManagement,
-        Icons.Rounded.Speed,
-        AdminMessage.ModuleConfigType.TRAFFICMANAGEMENT_CONFIG.value,
-        isSupported = { it.supportsTrafficManagementConfig },
-    ),
-    TAK(
-        Res.string.tak,
-        SettingsRoutes.TAK,
-        Icons.Rounded.People,
-        AdminMessage.ModuleConfigType.TAK_CONFIG.value,
-        isSupported = { it.supportsTakConfig },
-        isApplicable = { it == Config.DeviceConfig.Role.TAK || it == Config.DeviceConfig.Role.TAK_TRACKER },
-    ),
+//    CANNED_MESSAGE(
+//        Res.string.canned_message,
+//        SettingsRoutes.CannedMessage,
+//        Icons.AutoMirrored.Default.Message,
+//        AdminMessage.ModuleConfigType.CANNEDMSG_CONFIG.value,
+//    ),
+//    AUDIO(
+//        Res.string.audio,
+//        SettingsRoutes.Audio,
+//        Icons.AutoMirrored.Default.VolumeUp,
+//        AdminMessage.ModuleConfigType.AUDIO_CONFIG.value,
+//    ),
+//    REMOTE_HARDWARE(
+//        Res.string.remote_hardware,
+//        SettingsRoutes.RemoteHardware,
+//        Icons.Rounded.SettingsRemote,
+//        AdminMessage.ModuleConfigType.REMOTEHARDWARE_CONFIG.value,
+//    ),
+//    NEIGHBOR_INFO(
+//        Res.string.neighbor_info,
+//        SettingsRoutes.NeighborInfo,
+//        Icons.Rounded.People,
+//        AdminMessage.ModuleConfigType.NEIGHBORINFO_CONFIG.value,
+//    ),
+//    AMBIENT_LIGHTING(
+//        Res.string.ambient_lighting,
+//        SettingsRoutes.AmbientLighting,
+//        Icons.Rounded.LightMode,
+//        AdminMessage.ModuleConfigType.AMBIENTLIGHTING_CONFIG.value,
+//    ),
+//    DETECTION_SENSOR(
+//        Res.string.detection_sensor,
+//        SettingsRoutes.DetectionSensor,
+//        Icons.Rounded.Sensors,
+//        AdminMessage.ModuleConfigType.DETECTIONSENSOR_CONFIG.value,
+//    ),
+//    PAXCOUNTER(
+//        Res.string.paxcounter,
+//        SettingsRoutes.Paxcounter,
+//        Icons.Rounded.PermScanWifi,
+//        AdminMessage.ModuleConfigType.PAXCOUNTER_CONFIG.value,
+//    ),
+//    STATUS_MESSAGE(
+//        Res.string.status_message,
+//        SettingsRoutes.StatusMessage,
+//        Icons.AutoMirrored.Default.Message,
+//        AdminMessage.ModuleConfigType.STATUSMESSAGE_CONFIG.value,
+//        isSupported = { it.supportsStatusMessage },
+//    ),
+//    TRAFFIC_MANAGEMENT(
+//        Res.string.traffic_management,
+//        SettingsRoutes.TrafficManagement,
+//        Icons.Rounded.Speed,
+//        AdminMessage.ModuleConfigType.TRAFFICMANAGEMENT_CONFIG.value,
+//        isSupported = { it.supportsTrafficManagementConfig },
+//    ),
+//    TAK(
+//        Res.string.tak,
+//        SettingsRoutes.TAK,
+//        Icons.Rounded.People,
+//        AdminMessage.ModuleConfigType.TAK_CONFIG.value,
+//        isSupported = { it.supportsTakConfig },
+//        isApplicable = { it == Config.DeviceConfig.Role.TAK || it == Config.DeviceConfig.Role.TAK_TRACKER },
+//    ),
     ;
 
     val bitfield: Int
         get() =
             when (this) {
                 MQTT -> 0x0001
-                SERIAL -> 0x0002
-                EXT_NOTIFICATION -> 0x0004
-                STORE_FORWARD -> 0x0008
-                RANGE_TEST -> 0x0010
+//                SERIAL -> 0x0002
+//                EXT_NOTIFICATION -> 0x0004
+//                STORE_FORWARD -> 0x0008
+//                RANGE_TEST -> 0x0010
                 TELEMETRY -> 0x0020
-                CANNED_MESSAGE -> 0x0040
-                AUDIO -> 0x0080
-                REMOTE_HARDWARE -> 0x0100
-                NEIGHBOR_INFO -> 0x0200
-                AMBIENT_LIGHTING -> 0x0400
-                DETECTION_SENSOR -> 0x0800
-                PAXCOUNTER -> 0x1000
-                STATUS_MESSAGE -> 0x0000 // Not excludable yet
-                TRAFFIC_MANAGEMENT -> 0x0000 // Not excludable yet
-                TAK -> 0x0000 // Not excludable yet
+//                CANNED_MESSAGE -> 0x0040
+//                AUDIO -> 0x0080
+//                REMOTE_HARDWARE -> 0x0100
+//                NEIGHBOR_INFO -> 0x0200
+//                AMBIENT_LIGHTING -> 0x0400
+//                DETECTION_SENSOR -> 0x0800
+//                PAXCOUNTER -> 0x1000
+//                STATUS_MESSAGE -> 0x0000 // Not excludable yet
+//                TRAFFIC_MANAGEMENT -> 0x0000 // Not excludable yet
+//                TAK -> 0x0000 // Not excludable yet
             }
 
     companion object {

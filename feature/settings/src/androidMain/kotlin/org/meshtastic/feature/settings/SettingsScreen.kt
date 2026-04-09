@@ -231,12 +231,6 @@ fun SettingsScreen(
                     onShowThemePicker = { showThemePickerDialog = true },
                 )
 
-                ExpressiveSection(title = stringResource(Res.string.wifi_devices)) {
-                    ListItem(text = stringResource(Res.string.wifi_devices), leadingIcon = Icons.Rounded.Wifi) {
-                        onNavigate(WifiProvisionRoutes.WifiProvision())
-                    }
-                }
-
                 PersistenceSection(
                     cacheLimit = settingsViewModel.dbCacheLimit.collectAsStateWithLifecycle().value,
                     onSetCacheLimit = { settingsViewModel.setDbCacheLimit(it) },
