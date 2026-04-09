@@ -187,7 +187,7 @@ object DeepLinkRouter {
 //            "ext-notification" to SettingsRoutes.ExtNotification,
 //            "store-forward" to SettingsRoutes.StoreForward,
 //            "range-test" to SettingsRoutes.RangeTest,
-//            "telemetry" to SettingsRoutes.Telemetry,
+            "telemetry" to SettingsRoutes.Telemetry,
 //            "canned-message" to SettingsRoutes.CannedMessage,
 //            "audio" to SettingsRoutes.Audio,
 //            "remote-hardware" to SettingsRoutes.RemoteHardware,

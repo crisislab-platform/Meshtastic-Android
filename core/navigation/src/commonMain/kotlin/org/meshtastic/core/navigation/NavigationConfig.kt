@@ -86,7 +86,7 @@ val MeshtasticNavSavedStateConfig = SavedStateConfiguration {
 //            subclass(SettingsRoutes.ExtNotification::class, SettingsRoutes.ExtNotification.serializer())
 //            subclass(SettingsRoutes.StoreForward::class, SettingsRoutes.StoreForward.serializer())
 //            subclass(SettingsRoutes.RangeTest::class, SettingsRoutes.RangeTest.serializer())
-//            subclass(SettingsRoutes.Telemetry::class, SettingsRoutes.Telemetry.serializer())
+            subclass(SettingsRoutes.Telemetry::class, SettingsRoutes.Telemetry.serializer())
 //            subclass(SettingsRoutes.CannedMessage::class, SettingsRoutes.CannedMessage.serializer())
 //            subclass(SettingsRoutes.Audio::class, SettingsRoutes.Audio.serializer())
 //            subclass(SettingsRoutes.RemoteHardware::class, SettingsRoutes.RemoteHardware.serializer())
