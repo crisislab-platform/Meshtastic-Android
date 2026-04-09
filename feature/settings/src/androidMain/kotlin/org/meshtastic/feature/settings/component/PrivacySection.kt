@@ -99,10 +99,10 @@ fun PrivacySection(
 private fun PrivacySectionPreview() {
     AppTheme {
         PrivacySection(
-            analyticsAvailable = true,
-            analyticsEnabled = true,
+            analyticsAvailable = false,
+            analyticsEnabled = false,
             onToggleAnalytics = {},
-            provideLocation = true,
+            provideLocation = false,
             onToggleLocation = {},
             homoglyphEnabled = false,
             onToggleHomoglyph = {},
