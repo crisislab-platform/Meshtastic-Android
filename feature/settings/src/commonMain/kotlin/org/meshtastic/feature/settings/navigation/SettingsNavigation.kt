@@ -163,7 +163,7 @@ fun EntryProviderScope<NavKey>.settingsGraph(backStack: NavBackStack<NavKey>) {
 //                ModuleRoute.STORE_FORWARD ->
 //                    StoreForwardConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
 //                ModuleRoute.RANGE_TEST -> RangeTestConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
-//                ModuleRoute.TELEMETRY -> TelemetryConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
+                ModuleRoute.TELEMETRY -> TelemetryConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
 //                ModuleRoute.CANNED_MESSAGE ->
 //                    CannedMessageConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })
 //                ModuleRoute.AUDIO -> AudioConfigScreen(viewModel, onBack = { backStack.removeLastOrNull() })

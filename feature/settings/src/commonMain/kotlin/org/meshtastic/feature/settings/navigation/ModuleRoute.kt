@@ -89,12 +89,12 @@ enum class ModuleRoute(
 //        Icons.Rounded.Speed,
 //        AdminMessage.ModuleConfigType.RANGETEST_CONFIG.value,
 //    ),
-//    TELEMETRY(
-//        Res.string.telemetry,
-//        SettingsRoutes.Telemetry,
-//        Icons.Rounded.DataUsage,
-//        AdminMessage.ModuleConfigType.TELEMETRY_CONFIG.value,
-//    ),
+    TELEMETRY(
+        Res.string.telemetry,
+        SettingsRoutes.Telemetry,
+        Icons.Rounded.DataUsage,
+        AdminMessage.ModuleConfigType.TELEMETRY_CONFIG.value,
+    ),
 //    CANNED_MESSAGE(
 //        Res.string.canned_message,
 //        SettingsRoutes.CannedMessage,
@@ -169,7 +169,7 @@ enum class ModuleRoute(
 //                EXT_NOTIFICATION -> 0x0004
 //                STORE_FORWARD -> 0x0008
 //                RANGE_TEST -> 0x0010
-//                TELEMETRY -> 0x0020
+                TELEMETRY -> 0x0020
 //                CANNED_MESSAGE -> 0x0040
 //                AUDIO -> 0x0080
 //                REMOTE_HARDWARE -> 0x0100

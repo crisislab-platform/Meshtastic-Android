@@ -134,7 +134,7 @@ object SettingsRoutes {
 //
 //    @Serializable data object RangeTest : Route
 //
-//    @Serializable data object Telemetry : Route
+    @Serializable data object Telemetry : Route
 //
 //    @Serializable data object CannedMessage : Route
 //
