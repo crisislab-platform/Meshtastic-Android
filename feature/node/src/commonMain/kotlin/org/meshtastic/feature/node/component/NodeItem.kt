@@ -200,12 +200,12 @@ fun NodeItem(
                 contentColor = contentColor,
             )
 
-            NodeSignalRow(thatNode = thatNode, isThisNode = isThisNode, contentColor = contentColor)
+//            NodeSignalRow(thatNode = thatNode, isThisNode = isThisNode, contentColor = contentColor)
 
-            val sensorItems = gatherSensors(thatNode, tempInFahrenheit, contentColor)
-            if (sensorItems.isNotEmpty()) {
-                MetricsGrid(sensorItems)
-            }
+//            val sensorItems = gatherSensors(thatNode, tempInFahrenheit, contentColor)
+//            if (sensorItems.isNotEmpty()) {
+//                MetricsGrid(sensorItems)
+//            }
 
             NodeItemFooter(thatNode = thatNode, contentColor = contentColor)
         }
@@ -230,19 +230,19 @@ private fun NodeBatteryPositionRow(
             contentColor = contentColor,
         )
 
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-            if (distance != null) {
-                DistanceInfo(distance = distance, contentColor = contentColor)
-            }
-            thatNode.validPosition?.let { position ->
-                ElevationInfo(
-                    altitude = position.altitude ?: 0,
-                    system = system,
-                    suffix = stringResource(Res.string.elevation_suffix),
-                    contentColor = contentColor,
-                )
-            }
-        }
+//        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+//            if (distance != null) {
+//                DistanceInfo(distance = distance, contentColor = contentColor)
+//            }
+//            thatNode.validPosition?.let { position ->
+//                ElevationInfo(
+//                    altitude = position.altitude ?: 0,
+//                    system = system,
+//                    suffix = stringResource(Res.string.elevation_suffix),
+//                    contentColor = contentColor,
+//                )
+//            }
+//        }
     }
 }
 
