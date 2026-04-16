@@ -128,29 +128,26 @@ fun EntryProviderScope<NavKey>.nodeDetailGraph(
         mapScreen(args.destNum) { backStack.removeLastOrNull() }
     }
 
-    entry<NodeDetailRoutes.TracerouteLog>(metadata = { ListDetailSceneStrategy.extraPane() }) { args ->
-        val metricsViewModel = koinViewModel<MetricsViewModel> { parametersOf(args.destNum) }
-        metricsViewModel.setNodeId(args.destNum)
+//    entry<NodeDetailRoutes.TracerouteLog>(metadata = { ListDetailSceneStrategy.extraPane() }) { args ->
+//        val metricsViewModel = koinViewModel<MetricsViewModel> { parametersOf(args.destNum) }
+//        metricsViewModel.setNodeId(args.destNum)
+//
+//        TracerouteLogScreen(
+//            viewModel = metricsViewModel,
+//            onNavigateUp = { backStack.removeLastOrNull() },
+//            onViewOnMap = { requestId, responseLogUuid ->
+//                backStack.add(
+//                    NodeDetailRoutes.TracerouteMap(
+//                        destNum = args.destNum,
+//                        requestId = requestId,
+//                        logUuid = responseLogUuid,
+//                    ),
+//                )
+//            },
+//        )
+//    }
 
-        TracerouteLogScreen(
-            viewModel = metricsViewModel,
-            onNavigateUp = { backStack.removeLastOrNull() },
-            onViewOnMap = { requestId, responseLogUuid ->
-                backStack.add(
-                    NodeDetailRoutes.TracerouteMap(
-                        destNum = args.destNum,
-                        requestId = requestId,
-                        logUuid = responseLogUuid,
-                    ),
-                )
-            },
-        )
-    }
-
-    entry<NodeDetailRoutes.TracerouteMap>(metadata = { ListDetailSceneStrategy.extraPane() }) { args ->
-        val tracerouteMapScreen = org.meshtastic.core.ui.util.LocalTracerouteMapScreenProvider.current
-        tracerouteMapScreen(args.destNum, args.requestId, args.logUuid) { backStack.removeLastOrNull() }
-    }
+//    q
 
     NodeDetailRoute.entries.forEach { routeInfo ->
         when (routeInfo.routeClass) {
@@ -158,18 +155,18 @@ fun EntryProviderScope<NavKey>.nodeDetailGraph(
                 addNodeDetailScreenComposable<NodeDetailRoutes.DeviceMetrics>(backStack, routeInfo) { it.destNum }
             NodeDetailRoutes.PositionLog::class ->
                 addNodeDetailScreenComposable<NodeDetailRoutes.PositionLog>(backStack, routeInfo) { it.destNum }
-            NodeDetailRoutes.EnvironmentMetrics::class ->
-                addNodeDetailScreenComposable<NodeDetailRoutes.EnvironmentMetrics>(backStack, routeInfo) { it.destNum }
-            NodeDetailRoutes.SignalMetrics::class ->
-                addNodeDetailScreenComposable<NodeDetailRoutes.SignalMetrics>(backStack, routeInfo) { it.destNum }
-            NodeDetailRoutes.PowerMetrics::class ->
-                addNodeDetailScreenComposable<NodeDetailRoutes.PowerMetrics>(backStack, routeInfo) { it.destNum }
-            NodeDetailRoutes.HostMetricsLog::class ->
-                addNodeDetailScreenComposable<NodeDetailRoutes.HostMetricsLog>(backStack, routeInfo) { it.destNum }
-            NodeDetailRoutes.PaxMetrics::class ->
-                addNodeDetailScreenComposable<NodeDetailRoutes.PaxMetrics>(backStack, routeInfo) { it.destNum }
-            NodeDetailRoutes.NeighborInfoLog::class ->
-                addNodeDetailScreenComposable<NodeDetailRoutes.NeighborInfoLog>(backStack, routeInfo) { it.destNum }
+//            NodeDetailRoutes.EnvironmentMetrics::class ->
+//                addNodeDetailScreenComposable<NodeDetailRoutes.EnvironmentMetrics>(backStack, routeInfo) { it.destNum }
+//            NodeDetailRoutes.SignalMetrics::class ->
+//                addNodeDetailScreenComposable<NodeDetailRoutes.SignalMetrics>(backStack, routeInfo) { it.destNum }
+//            NodeDetailRoutes.PowerMetrics::class ->
+//                addNodeDetailScreenComposable<NodeDetailRoutes.PowerMetrics>(backStack, routeInfo) { it.destNum }
+//            NodeDetailRoutes.HostMetricsLog::class ->
+//                addNodeDetailScreenComposable<NodeDetailRoutes.HostMetricsLog>(backStack, routeInfo) { it.destNum }
+//            NodeDetailRoutes.PaxMetrics::class ->
+//                addNodeDetailScreenComposable<NodeDetailRoutes.PaxMetrics>(backStack, routeInfo) { it.destNum }
+//            NodeDetailRoutes.NeighborInfoLog::class ->
+//                addNodeDetailScreenComposable<NodeDetailRoutes.NeighborInfoLog>(backStack, routeInfo) { it.destNum }
             else -> Unit
         }
     }
@@ -211,46 +208,46 @@ enum class NodeDetailRoute(
         Icons.Rounded.LocationOn,
         { metricsVM, onNavigateUp -> PositionLogScreen(metricsVM, onNavigateUp) },
     ),
-    ENVIRONMENT(
-        Res.string.environment,
-        NodeDetailRoutes.EnvironmentMetrics::class,
-        Icons.Rounded.LightMode,
-        { metricsVM, onNavigateUp -> EnvironmentMetricsScreen(metricsVM, onNavigateUp) },
-    ),
-    SIGNAL(
-        Res.string.signal,
-        NodeDetailRoutes.SignalMetrics::class,
-        Icons.Rounded.CellTower,
-        { metricsVM, onNavigateUp -> SignalMetricsScreen(metricsVM, onNavigateUp) },
-    ),
-    TRACEROUTE(
-        Res.string.traceroute,
-        NodeDetailRoutes.TracerouteLog::class,
-        Icons.Rounded.PermScanWifi,
-        { metricsVM, onNavigateUp -> TracerouteLogScreen(viewModel = metricsVM, onNavigateUp = onNavigateUp) },
-    ),
-    NEIGHBOR_INFO(
-        Res.string.neighbor_info,
-        NodeDetailRoutes.NeighborInfoLog::class,
-        Icons.Rounded.Groups,
-        { metricsVM, onNavigateUp -> NeighborInfoLogScreen(viewModel = metricsVM, onNavigateUp = onNavigateUp) },
-    ),
-    POWER(
-        Res.string.power,
-        NodeDetailRoutes.PowerMetrics::class,
-        Icons.Rounded.Power,
-        { metricsVM, onNavigateUp -> PowerMetricsScreen(metricsVM, onNavigateUp) },
-    ),
-    HOST(
-        Res.string.host,
-        NodeDetailRoutes.HostMetricsLog::class,
-        Icons.Rounded.Memory,
-        { metricsVM, onNavigateUp -> HostMetricsLogScreen(metricsVM, onNavigateUp) },
-    ),
-    PAX(
-        Res.string.pax,
-        NodeDetailRoutes.PaxMetrics::class,
-        Icons.Rounded.People,
-        { metricsVM, onNavigateUp -> PaxMetricsScreen(metricsVM, onNavigateUp) },
-    ),
+//    ENVIRONMENT(
+//        Res.string.environment,
+//        NodeDetailRoutes.EnvironmentMetrics::class,
+//        Icons.Rounded.LightMode,
+//        { metricsVM, onNavigateUp -> EnvironmentMetricsScreen(metricsVM, onNavigateUp) },
+//    ),
+//    SIGNAL(
+//        Res.string.signal,
+//        NodeDetailRoutes.SignalMetrics::class,
+//        Icons.Rounded.CellTower,
+//        { metricsVM, onNavigateUp -> SignalMetricsScreen(metricsVM, onNavigateUp) },
+//    ),
+//    TRACEROUTE(
+//        Res.string.traceroute,
+//        NodeDetailRoutes.TracerouteLog::class,
+//        Icons.Rounded.PermScanWifi,
+//        { metricsVM, onNavigateUp -> TracerouteLogScreen(viewModel = metricsVM, onNavigateUp = onNavigateUp) },
+//    ),
+//    NEIGHBOR_INFO(
+//        Res.string.neighbor_info,
+//        NodeDetailRoutes.NeighborInfoLog::class,
+//        Icons.Rounded.Groups,
+//        { metricsVM, onNavigateUp -> NeighborInfoLogScreen(viewModel = metricsVM, onNavigateUp = onNavigateUp) },
+//    ),
+//    POWER(
+//        Res.string.power,
+//        NodeDetailRoutes.PowerMetrics::class,
+//        Icons.Rounded.Power,
+//        { metricsVM, onNavigateUp -> PowerMetricsScreen(metricsVM, onNavigateUp) },
+//    ),
+//    HOST(
+//        Res.string.host,
+//        NodeDetailRoutes.HostMetricsLog::class,
+//        Icons.Rounded.Memory,
+//        { metricsVM, onNavigateUp -> HostMetricsLogScreen(metricsVM, onNavigateUp) },
+//    ),
+//    PAX(
+//        Res.string.pax,
+//        NodeDetailRoutes.PaxMetrics::class,
+//        Icons.Rounded.People,
+//        { metricsVM, onNavigateUp -> PaxMetricsScreen(metricsVM, onNavigateUp) },
+//    ),
 }

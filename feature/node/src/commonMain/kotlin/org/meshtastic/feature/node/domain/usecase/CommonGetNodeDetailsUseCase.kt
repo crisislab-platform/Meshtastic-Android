@@ -189,13 +189,13 @@ constructor(
                     add(LogsType.NODE_MAP)
                     add(LogsType.POSITIONS)
                 }
-                if (environmentState.hasEnvironmentMetrics()) add(LogsType.ENVIRONMENT)
-                if (metricsState.hasSignalMetrics()) add(LogsType.SIGNAL)
-                if (metricsState.hasPowerMetrics()) add(LogsType.POWER)
-                if (metricsState.hasTracerouteLogs()) add(LogsType.TRACEROUTE)
-                if (metricsState.hasNeighborInfoLogs()) add(LogsType.NEIGHBOR_INFO)
-                if (metricsState.hasHostMetrics()) add(LogsType.HOST)
-                if (metricsState.hasPaxMetrics()) add(LogsType.PAX)
+//                if (environmentState.hasEnvironmentMetrics()) add(LogsType.ENVIRONMENT)
+//                if (metricsState.hasSignalMetrics()) add(LogsType.SIGNAL)
+//                if (metricsState.hasPowerMetrics()) add(LogsType.POWER)
+//                if (metricsState.hasTracerouteLogs()) add(LogsType.TRACEROUTE)
+//                if (metricsState.hasNeighborInfoLogs()) add(LogsType.NEIGHBOR_INFO)
+//                if (metricsState.hasHostMetrics()) add(LogsType.HOST)
+//                if (metricsState.hasPaxMetrics()) add(LogsType.PAX)
             }
 
             @Suppress("MagicNumber")

@@ -70,21 +70,21 @@ object NodeDetailRoutes {
 
     @Serializable data class PositionLog(val destNum: Int) : Route
 
-    @Serializable data class EnvironmentMetrics(val destNum: Int) : Route
+//    @Serializable data class EnvironmentMetrics(val destNum: Int) : Route
 
-    @Serializable data class SignalMetrics(val destNum: Int) : Route
+//    @Serializable data class SignalMetrics(val destNum: Int) : Route
 
-    @Serializable data class PowerMetrics(val destNum: Int) : Route
+//    @Serializable data class PowerMetrics(val destNum: Int) : Route
 
-    @Serializable data class TracerouteLog(val destNum: Int) : Route
+//    @Serializable data class TracerouteLog(val destNum: Int) : Route
 
-    @Serializable data class TracerouteMap(val destNum: Int, val requestId: Int, val logUuid: String? = null) : Route
+//    @Serializable data class TracerouteMap(val destNum: Int, val requestId: Int, val logUuid: String? = null) : Route
 
-    @Serializable data class HostMetricsLog(val destNum: Int) : Route
+//    @Serializable data class HostMetricsLog(val destNum: Int) : Route
 
-    @Serializable data class PaxMetrics(val destNum: Int) : Route
+//    @Serializable data class PaxMetrics(val destNum: Int) : Route
 
-    @Serializable data class NeighborInfoLog(val destNum: Int) : Route
+//    @Serializable data class NeighborInfoLog(val destNum: Int) : Route
 }
 
 object SettingsRoutes {

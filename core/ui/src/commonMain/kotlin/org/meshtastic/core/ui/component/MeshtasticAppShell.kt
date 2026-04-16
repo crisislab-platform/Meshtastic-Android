@@ -43,9 +43,9 @@ fun MeshtasticAppShell(
     MeshtasticCommonAppSetup(
         uiViewModel = uiViewModel,
         onNavigateToTracerouteMap = { destNum, requestId, logUuid ->
-            multiBackstack.activeBackStack.add(
-                NodeDetailRoutes.TracerouteMap(destNum = destNum, requestId = requestId, logUuid = logUuid),
-            )
+//            multiBackstack.activeBackStack.add(
+//                NodeDetailRoutes.TracerouteMap(destNum = destNum, requestId = requestId, logUuid = logUuid),
+//            )
         },
     )
 

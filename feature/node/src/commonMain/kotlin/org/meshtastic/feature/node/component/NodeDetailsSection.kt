@@ -145,24 +145,24 @@ private fun MainNodeDetails(node: Node) {
             StatusMessageRow(status)
         }
         SectionDivider()
-        NodeIdentificationRow(node)
+//        NodeIdentificationRow(node)
         SectionDivider()
         HearsAndHopsRow(node)
         SectionDivider()
-        UserAndUptimeRow(node)
+//        UserAndUptimeRow(node)
         if (node.hopsAway == 0 && !node.viaMqtt) {
             SectionDivider()
             SignalRow(node)
         }
-        if (node.viaMqtt || node.manuallyVerified) {
-            SectionDivider()
-            MqttAndVerificationRow(node)
-        }
-        val publicKey = node.publicKey ?: node.user.public_key
-        if (publicKey.size > 0) {
-            SectionDivider()
-            PublicKeyItem(publicKey.toByteArray())
-        }
+//        if (node.viaMqtt || node.manuallyVerified) {
+//            SectionDivider()
+//            MqttAndVerificationRow(node)
+//        }
+//        val publicKey = node.publicKey ?: node.user.public_key
+//        if (publicKey.size > 0) {
+//            SectionDivider()
+//            PublicKeyItem(publicKey.toByteArray())
+//        }
     }
 }
 
